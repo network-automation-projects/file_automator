@@ -32,3 +32,48 @@ Directly supports tasks like:
 Install dependency:
 ```bash
 pip install pyyaml
+
+Project Structure
+textfile_automator/
+├── config_automator.py     # Main script
+├── configs/                # Example config files (add your own)
+├── backups/                # Generated backups
+├── logs/                   # Automation logs
+└── README.md
+Usage
+Basic (uses default placeholder → updated_value)
+Bashpython config_automator.py configs
+Custom placeholder replacement
+Bashpython config_automator.py configs --placeholder old_server_ip --new_value 10.0.0.100
+Help
+Bashpython config_automator.py --help
+Example Config Files
+Add files like these to the configs/ directory:
+configs/config1.yaml
+YAMLserver:
+  host: localhost
+  port: 8080
+  value: placeholder_value
+configs/config2.json
+JSON{
+  "database": {
+    "url": "mysql://localhost/db",
+    "value": "placeholder_value"
+  }
+}
+After running, originals are updated and backups are preserved.
+Logging
+All actions are logged to logs/automation.log with timestamps for auditability and debugging.
+Future Extensions
+
+Integration with version control (auto-commit changes)
+Support for Jinja2 templating
+Dry-run mode
+Integration with configuration management tools (Ansible, etc.)
+
+Built By
+Rebecca Clarke
+Working toward Senior Software Engineer / Network Automation roles
+[GitHub Profile] | [LinkedIn] (add your links)
+
+This project is part of a series of practical Python automation tools built to prepare for roles involving network reliability, observability, and infrastructure automation.
