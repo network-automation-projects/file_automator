@@ -1,4 +1,6 @@
-server:
-  host: localhost
-  port: 8080
-  value: placeholder_value
+{
+    "database": {
+        "url": "mysql://localhost/db",
+        "value": "updated_value"
+    }
+}
