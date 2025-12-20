@@ -18,8 +18,9 @@ venv.bak/
 *~
 
 # Logs and backups (generated files)
-logs/*.log
-backups/*
+# Uncomment below to exclude logs and backups:
+# logs/*.log
+# backups/*
 
 # OS
 .DS_Store

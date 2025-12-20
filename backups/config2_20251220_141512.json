@@ -1,0 +1,6 @@
+{
+  "database": {
+    "url": "mysql://localhost/db",
+    "value": "placeholder_value"
+  }
+}
