@@ -1,6 +1,6 @@
 # Config File Automator (Python)
 
-A command-line tool for safely backing up and modifying YAML/JSON configuration files with recursive placeholder replacement.
+Python CLI for automating structured file updates (YAML/JSON) with logging and safety checks.
 
 Built as hands-on practice for network automation and DevOps roles — specifically automating configuration management for infrastructure and network devices.
 
