@@ -2,28 +2,28 @@
 
 Python CLI for automating structured file updates (YAML/JSON) with logging and safety checks.
 
-Built as hands-on practice for network automation and DevOps roles — specifically automating configuration management for infrastructure and network devices.
+Built as hands-on practice for network automation and DevOps roles - specifically automating configuration management for infrastructure and network devices.
 
 ## Why This Project?
-This tool demonstrates practical skills relevant to network reliability and automation engineering:
-- Safe, timestamped backups before any changes
-- Recursive modification of nested YAML and JSON structures (common in network device configs)
-- Comprehensive logging and robust error handling
-- CLI interface for easy integration into automation workflows
-- Clean, modular code following Python best practices
 
-Directly supports tasks like:
-- Automating provisioning and configuration of network devices/services
-- Streamlining workflows and reducing manual operations
-- Managing configuration files across environments
+I built this tool to practice making **safe, repeatable configuration changes** across lots of files — the kind of work that comes up constantly in network and infrastructure automation.
+
+Rather than editing configs by hand, I wanted a simple CLI that could:
+- back up files automatically,
+- make structured changes reliably,
+- and leave a clear audit trail when something went wrong.
+
+This project helped me get comfortable with treating configuration changes as something that should be **scripted, logged, and reversible**, not ad hoc.
+
 
 ## Features
-- Scans a directory for `.yaml`, `.yml`, and `.json` files
-- Creates timestamped backups in a `backups/` directory
-- Recursively replaces placeholder values in nested structures
-- Detailed logging of all actions and errors (`logs/automation.log`)
-- Customizable via command-line arguments
-- Graceful handling of parsing errors and unsupported files
+
+- Scans directories for YAML and JSON config files
+- Creates timestamped backups before modifying anything
+- Recursively updates nested values (common in real-world configs)
+- Logs every action and error to a file for traceability
+- Exposed as a CLI so it can be chained into other automation
+
 
 ## Requirements
 - Python 3.6+
